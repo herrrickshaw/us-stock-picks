@@ -7,6 +7,8 @@ Turn the existing **full US market scan** (Darvas, Piotroski, Coffee Can, Magic 
 
 No new market download is required if a recent `us_full_scan_*.xlsx` exists (your daily pipeline already writes these).
 
+**Data freshness note**: the "as of" date shown in reports is parsed from the scan workbook's filename (falling back to its file-modified time if the name doesn't match), not from the trading session actually contained in the data. If a scan file gets renamed, copied, or regenerated late, double-check the underlying data before treating the label as authoritative.
+
 ---
 
 ## Quick start
