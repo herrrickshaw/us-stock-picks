@@ -1,0 +1,80 @@
+{
+  "outputs/us_picks_2026-07-24_00.json": {
+    "mtime": 1784899981.7776716,
+    "seen": 1789193338.370677,
+    "ast_hash": "08174f5035bb755926c812ffe42b3709",
+    "semantic_hash": ""
+  },
+  "outputs/us_picks_latest.json": {
+    "mtime": 1784899981.778705,
+    "seen": 1789193338.37068,
+    "ast_hash": "08174f5035bb755926c812ffe42b3709",
+    "semantic_hash": ""
+  },
+  "run_us_picks.py": {
+    "mtime": 1784899976.2649598,
+    "seen": 1789193338.370681,
+    "ast_hash": "b744e87055ce1dce18ccd7f1e8f4c013",
+    "semantic_hash": ""
+  },
+  "us_stock_picks/__init__.py": {
+    "mtime": 1784899976.2649913,
+    "seen": 1789193338.370682,
+    "ast_hash": "d598a61ca9aca28689d9db46486771c5",
+    "semantic_hash": ""
+  },
+  "us_stock_picks/__main__.py": {
+    "mtime": 1784899976.2648811,
+    "seen": 1789193338.370683,
+    "ast_hash": "459f1e229834d1d858af6dcac560f1b4",
+    "semantic_hash": ""
+  },
+  "us_stock_picks/config.py": {
+    "mtime": 1784899765.456271,
+    "seen": 1789193338.370684,
+    "ast_hash": "5d60979276ba57dc98171b1b66100336",
+    "semantic_hash": ""
+  },
+  "us_stock_picks/engine.py": {
+    "mtime": 1784899855.5445666,
+    "seen": 1789193338.370684,
+    "ast_hash": "fc421c4b0f58996aa0c577eefbf2f599",
+    "semantic_hash": ""
+  },
+  "us_stock_picks/report.py": {
+    "mtime": 1784899928.9633918,
+    "seen": 1789193338.3706849,
+    "ast_hash": "6df30e013254873e80d0ec082136a776",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1789399392.9036329,
+    "seen": 1789968887.19697,
+    "ast_hash": "07319a76821e613907fc254192fb25be",
+    "semantic_hash": ""
+  },
+  "outputs/us_investor_picks_2026-07-24_00.html": {
+    "mtime": 1784899981.7602348,
+    "seen": 1789193338.370686,
+    "ast_hash": "f47022e399586f20ee5ae435366ad43a",
+    "semantic_hash": ""
+  },
+  "outputs/us_investor_picks_latest.html": {
+    "mtime": 1784899981.7605073,
+    "seen": 1789193338.370687,
+    "ast_hash": "f47022e399586f20ee5ae435366ad43a",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1784899976.2649188,
+    "seen": 1789193338.370688,
+    "ast_hash": "de6f9d58524b7de0e06a58a7c4d6a5a6",
+    "semantic_hash": ""
+  },
+  ".github/workflows/quality-gates.yml": {
+    "mtime": 1789577679.4813523,
+    "seen": 1789968887.196961,
+    "ast_hash": "510f7e392c07f0574ba8a559ba2cdf12",
+    "semantic_hash": ""
+  }
+}

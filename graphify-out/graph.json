@@ -1,0 +1,2172 @@
+{
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "nodes": [
+    {
+      "id": "run_us_picks",
+      "label": "run_us_picks.py",
+      "file_type": "code",
+      "source_file": "run_us_picks.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "run_us_picks_rationale_2",
+      "label": "Convenience launcher: ./run_us_picks.py or python run_us_picks.py",
+      "file_type": "rationale",
+      "source_file": "run_us_picks.py",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "us_stock_picks/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_init_rationale_1",
+      "label": "US stock picks — investor shortlist + quant multi-screen ranking.",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_main",
+      "label": "__main__.py",
+      "file_type": "code",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_main_maybe_refresh",
+      "label": "_maybe_refresh()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L14",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_main_py_path",
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_main_build_parser",
+      "label": "build_parser()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L33",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "argumentparser",
+      "label": "ArgumentParser",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_main_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L86",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_main_rationale_1",
+      "label": "CLI: python -m us_stock_picks",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_main_rationale_15",
+      "label": "Optionally run full_us_market_scan.py and return newest workbook path.",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_config",
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "us_stock_picks/config.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_config_rationale_1",
+      "label": "Defaults for the US stock-picks product.",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/config.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine",
+      "label": "engine.py",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_find_latest_scan",
+      "label": "find_latest_scan()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L21",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_py_path",
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_scan_as_of",
+      "label": "_scan_as_of()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L49",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_read_sheet",
+      "label": "_read_sheet()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L58",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_py_dataframe",
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_num",
+      "label": "_num()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L71",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "series",
+      "label": "Series",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_boolish",
+      "label": "_boolish()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L75",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_load_universe",
+      "label": "load_universe()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L83",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_screen_flags",
+      "label": "_screen_flags()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L136",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_screen_flags_list_screens",
+      "label": "_list_screens()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L212",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_conviction_score",
+      "label": "_conviction_score()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L220",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_assign_sleeve",
+      "label": "_assign_sleeve()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L256",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_thesis",
+      "label": "_thesis()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L272",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_apply_filters",
+      "label": "apply_filters()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L320",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_rank_picks",
+      "label": "rank_picks()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L357",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_diversify",
+      "label": "diversify()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L378",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_build_portfolio",
+      "label": "build_portfolio()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L409",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_pickresult",
+      "label": "PickResult",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L428",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_run_picks",
+      "label": "run_picks()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L439",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_quant_frame",
+      "label": "quant_frame()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L527",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_rationale_1",
+      "label": "US stock-picks engine. Loads the latest full US market scan workbook (Darvas /…",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_rationale_22",
+      "label": "Return newest US full-scan workbook, or raise FileNotFoundError.",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_rationale_84",
+      "label": "Merge technical + fundamental + ML sheets into one symbol-level frame.",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L84",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_rationale_383",
+      "label": "Greedy sector-capped selection preserving conviction order.",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L383",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_engine_rationale_410",
+      "label": "Equal-weight paper portfolio from top diversified CORE/QUALITY/MOMENTUM picks.",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L410",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report",
+      "label": "report.py",
+      "file_type": "code",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_esc",
+      "label": "_esc()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L15",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "any",
+      "label": "Any",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_money",
+      "label": "_money()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L21",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_pct",
+      "label": "_pct()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L28",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_intish",
+      "label": "_intish()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L35",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_render_html",
+      "label": "render_html()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L52",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_df_records",
+      "label": "_df_records()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L242",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_py_dataframe",
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_write_outputs",
+      "label": "write_outputs()",
+      "file_type": "code",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L262",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_py_path",
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "us_stock_picks_report_rationale_1",
+      "label": "HTML investor report + CSV/JSON quant exports.",
+      "file_type": "rationale",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_us_stock_picks_investor_quant_product",
+      "label": "US Stock Picks — Investor + Quant Product",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_quick_start",
+      "label": "Quick start",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_what_it_does",
+      "label": "What it does",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_cli_options",
+      "label": "CLI options",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_outputs",
+      "label": "Outputs",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L68",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_how_this_fits_your_stack",
+      "label": "How this fits your stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L80",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_disclaimer",
+      "label": "Disclaimer",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_dependencies",
+      "label": "Dependencies",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L103",
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "run_us_picks",
+      "target": "us_stock_picks_main",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "run_us_picks.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "run_us_picks_rationale_2",
+      "target": "run_us_picks",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "run_us_picks.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_init",
+      "target": "us_stock_picks_engine",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__init__.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_init_rationale_1",
+      "target": "us_stock_picks_init",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "argparse",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "subprocess",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_init",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_engine",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_report",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_main_maybe_refresh",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main_maybe_refresh",
+      "target": "us_stock_picks_main_py_path",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_main_build_parser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main_build_parser",
+      "target": "argumentparser",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_main_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main_main",
+      "target": "us_stock_picks_main_build_parser",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main_main",
+      "target": "us_stock_picks_main_maybe_refresh",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main_rationale_1",
+      "target": "us_stock_picks_main",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main_rationale_15",
+      "target": "us_stock_picks_main_maybe_refresh",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_config",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/config.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_config_rationale_1",
+      "target": "us_stock_picks_config",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/config.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "re",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "pandas",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_init",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_find_latest_scan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_find_latest_scan",
+      "target": "us_stock_picks_engine_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_scan_as_of",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_scan_as_of",
+      "target": "us_stock_picks_engine_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_read_sheet",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_read_sheet",
+      "target": "us_stock_picks_engine_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_read_sheet",
+      "target": "us_stock_picks_engine_py_dataframe",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_num",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_num",
+      "target": "series",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_boolish",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_boolish",
+      "target": "series",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_load_universe",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_load_universe",
+      "target": "us_stock_picks_engine_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_load_universe",
+      "target": "us_stock_picks_engine_py_dataframe",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_screen_flags",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_screen_flags",
+      "target": "us_stock_picks_engine_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_screen_flags",
+      "target": "us_stock_picks_engine_screen_flags_list_screens",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L212",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_conviction_score",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L220",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_conviction_score",
+      "target": "us_stock_picks_engine_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L220",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_conviction_score",
+      "target": "series",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L220",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_assign_sleeve",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L256",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_assign_sleeve",
+      "target": "series",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L256",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_thesis",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L272",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_thesis",
+      "target": "series",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L272",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_apply_filters",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L320",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_apply_filters",
+      "target": "us_stock_picks_engine_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L320",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_rank_picks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L357",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rank_picks",
+      "target": "us_stock_picks_engine_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L357",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_diversify",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L378",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_diversify",
+      "target": "us_stock_picks_engine_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L378",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_build_portfolio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L409",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_build_portfolio",
+      "target": "us_stock_picks_engine_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L409",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_pickresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L428",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_run_picks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L439",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L439",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_pickresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L439",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_engine_quant_frame",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L527",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_quant_frame",
+      "target": "us_stock_picks_engine_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L527",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_find_latest_scan",
+      "target": "us_stock_picks_engine_py_path",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_load_universe",
+      "target": "us_stock_picks_engine_read_sheet",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_load_universe",
+      "target": "us_stock_picks_engine_scan_as_of",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L132",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_screen_flags",
+      "target": "us_stock_picks_engine_boolish",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L143",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_screen_flags",
+      "target": "us_stock_picks_engine_num",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_screen_flags",
+      "target": "us_stock_picks_engine_screen_flags_list_screens",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_conviction_score",
+      "target": "us_stock_picks_engine_num",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L236",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_apply_filters",
+      "target": "us_stock_picks_engine_num",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L329",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rank_picks",
+      "target": "us_stock_picks_engine_conviction_score",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L359",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rank_picks",
+      "target": "us_stock_picks_engine_assign_sleeve",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L360",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rank_picks",
+      "target": "us_stock_picks_engine_thesis",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L362",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rank_picks",
+      "target": "us_stock_picks_engine_num",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L367",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_build_portfolio",
+      "target": "us_stock_picks_engine_num",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L423",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_py_path",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L449",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_find_latest_scan",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L449",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_load_universe",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L450",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_screen_flags",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L451",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_apply_filters",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L452",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_rank_picks",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L457",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_diversify",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L458",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_build_portfolio",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L459",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_scan_as_of",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L461",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_run_picks",
+      "target": "us_stock_picks_engine_pickresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L476",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rationale_1",
+      "target": "us_stock_picks_engine",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rationale_22",
+      "target": "us_stock_picks_engine_find_latest_scan",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rationale_84",
+      "target": "us_stock_picks_engine_load_universe",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rationale_383",
+      "target": "us_stock_picks_engine_diversify",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L383",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine_rationale_410",
+      "target": "us_stock_picks_engine_build_portfolio",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L410",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "html",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "pandas",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_engine",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_report_esc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_esc",
+      "target": "any",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_report_money",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_money",
+      "target": "any",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_report_pct",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_pct",
+      "target": "any",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_report_intish",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_intish",
+      "target": "any",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_report_render_html",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_render_html",
+      "target": "us_stock_picks_engine_pickresult",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_report_df_records",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L242",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_df_records",
+      "target": "us_stock_picks_report_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L242",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_df_records",
+      "target": "any",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L242",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_report_write_outputs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L262",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_write_outputs",
+      "target": "us_stock_picks_engine_pickresult",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L262",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_write_outputs",
+      "target": "us_stock_picks_report_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L262",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_render_html",
+      "target": "us_stock_picks_report_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_render_html",
+      "target": "us_stock_picks_report_money",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_render_html",
+      "target": "us_stock_picks_report_pct",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_render_html",
+      "target": "us_stock_picks_report_intish",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_write_outputs",
+      "target": "us_stock_picks_report_py_path",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L263",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_write_outputs",
+      "target": "us_stock_picks_report_render_html",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L270",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_write_outputs",
+      "target": "us_stock_picks_report_df_records",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L304",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_rationale_1",
+      "target": "us_stock_picks_report",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "readme_us_stock_picks_investor_quant_product",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_us_stock_picks_investor_quant_product",
+      "target": "readme_quick_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_us_stock_picks_investor_quant_product",
+      "target": "readme_what_it_does",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_us_stock_picks_investor_quant_product",
+      "target": "readme_cli_options",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_us_stock_picks_investor_quant_product",
+      "target": "readme_outputs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_us_stock_picks_investor_quant_product",
+      "target": "readme_how_this_fits_your_stack",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_us_stock_picks_investor_quant_product",
+      "target": "readme_disclaimer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_us_stock_picks_investor_quant_product",
+      "target": "readme_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_init",
+      "target": "us_stock_picks_engine",
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__init__.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "run_us_picks",
+      "target": "us_stock_picks_main_main",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "run_us_picks.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_init",
+      "target": "us_stock_picks_engine_pickresult",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__init__.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_init",
+      "target": "us_stock_picks_engine_find_latest_scan",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__init__.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_init",
+      "target": "us_stock_picks_engine_run_picks",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__init__.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_engine_find_latest_scan",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_engine_run_picks",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_report_write_outputs",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_engine_pickresult",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report",
+      "target": "us_stock_picks_engine_quant_frame",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main",
+      "target": "us_stock_picks_config",
+      "relation": "imports_from",
+      "context": "submodule_import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_engine",
+      "target": "us_stock_picks_config",
+      "relation": "imports_from",
+      "context": "submodule_import",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/engine.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main_maybe_refresh",
+      "target": "us_stock_picks_engine_find_latest_scan",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main_main",
+      "target": "us_stock_picks_engine_run_picks",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_main_main",
+      "target": "us_stock_picks_report_write_outputs",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/__main__.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_write_outputs",
+      "target": "us_stock_picks_engine_quant_frame",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L277",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_render_html",
+      "target": "us_stock_picks_engine_pickresult",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L52",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "us_stock_picks_report_write_outputs",
+      "target": "us_stock_picks_engine_pickresult",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "us_stock_picks/report.py",
+      "source_location": "L262",
+      "weight": 0.8,
+      "_origin": "ast"
+    }
+  ],
+  "directed": false
+}
