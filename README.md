@@ -1,5 +1,9 @@
 # US Stock Picks — Investor + Quant Product
 
+<!-- how-to-use-with-ai -->
+> **New here?** See [How to use this repo with AI (Claude, Gemini, ChatGPT)](HOW_TO_USE_WITH_AI.md) — clone it, paste it into an AI tool, and ask in plain English.
+
+
 Turn the existing **full US market scan** (Darvas, Piotroski, Coffee Can, Magic Formula, Bull Cartel, golden cross, breakout quality, ML overlay) into:
 
 1. **Investor product** — sector-capped shortlist, plain-English thesis, equal-weight paper portfolio, HTML report  
