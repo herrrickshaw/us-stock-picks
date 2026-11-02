@@ -2,18 +2,23 @@
 from __future__ import annotations
 
 import argparse
+import logging
 import subprocess
 import sys
 from pathlib import Path
 
 from . import config as cfg
-from .engine import find_latest_scan, run_picks
+from .engine import PickResult, find_latest_scan, run_picks
 from .report import write_outputs
+
+log = logging.getLogger(__name__)
+
+REFRESH_SCRIPT = Path.home() / "market-pipeline" / "code" / "python_files" / "full_us_market_scan.py"
 
 
 def _maybe_refresh(top: int | None, workers: int) -> Path | None:
     """Optionally run full_us_market_scan.py and return newest workbook path."""
-    scan_script = Path.home() / "market-pipeline" / "code" / "python_files" / "full_us_market_scan.py"
+    scan_script = REFRESH_SCRIPT
     if not scan_script.exists():
         print(f"Refresh skipped — scan script not found: {scan_script}", file=sys.stderr)
         return None
@@ -83,7 +88,32 @@ def build_parser() -> argparse.ArgumentParser:
     return p
 
 
+def _print_summary(result: PickResult, paths: dict[str, Path]) -> None:
+    """Print the run summary, investor shortlist and output paths to stdout."""
+    print("US Stock Picks")
+    print(f"  as of:     {result.as_of}")
+    print(f"  scan:      {result.scan_path}")
+    print(f"  universe:  {result.universe_n:,}")
+    print(f"  liquid:    {result.liquid_n:,}")
+    print(f"  ranked:    {len(result.ranked):,}")
+    print(f"  sleeves:   {result.summary.get('sleeve_counts')}")
+    print()
+    print("Investor shortlist:")
+    show = result.investor_picks
+    wanted = ("investor_rank", "Symbol", "sleeve", "conviction_score", "screens_passed", "Sector", "LTP")
+    cols = [c for c in wanted if c in show.columns]
+    if not show.empty:
+        print(show[cols].to_string(index=False))
+    else:
+        print("  (none — relax filters or refresh scan)")
+    print()
+    print("Outputs:")
+    for k, path in paths.items():
+        print(f"  {k:14s} {path}")
+
+
 def main(argv: list[str] | None = None) -> int:
+    """CLI entry point; returns the process exit code (1 = no scan found, 2 = other error)."""
     args = build_parser().parse_args(argv)
 
     scan_path = args.scan
@@ -111,31 +141,13 @@ def main(argv: list[str] | None = None) -> int:
 
     paths = write_outputs(result, args.out)
 
-    print("US Stock Picks")
-    print(f"  as of:     {result.as_of}")
-    print(f"  scan:      {result.scan_path}")
-    print(f"  universe:  {result.universe_n:,}")
-    print(f"  liquid:    {result.liquid_n:,}")
-    print(f"  ranked:    {len(result.ranked):,}")
-    print(f"  sleeves:   {result.summary.get('sleeve_counts')}")
-    print()
-    print("Investor shortlist:")
-    show = result.investor_picks
-    cols = [c for c in ("investor_rank", "Symbol", "sleeve", "conviction_score", "screens_passed", "Sector", "LTP") if c in show.columns]
-    if not show.empty:
-        print(show[cols].to_string(index=False))
-    else:
-        print("  (none — relax filters or refresh scan)")
-    print()
-    print("Outputs:")
-    for k, path in paths.items():
-        print(f"  {k:14s} {path}")
+    _print_summary(result, paths)
 
     if args.open and "html_latest" in paths:
         try:
             subprocess.run(["open", str(paths["html_latest"])], check=False)
-        except Exception:
-            pass
+        except OSError as exc:  # `open` is macOS-only
+            log.warning("could not open report: %s", exc)
 
     return 0
 

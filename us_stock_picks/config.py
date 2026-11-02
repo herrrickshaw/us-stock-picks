@@ -46,3 +46,22 @@ CORE_MIN_SCORE = 48
 CORE_MIN_SCREENS = 2
 MOMENTUM_MIN_SCORE = 35
 QUALITY_MIN_SCORE = 32
+
+# Liquidity-tier bonus added to the conviction score.
+TIER_SCORE_BONUS = {
+    "T1_MOST_LIQUID": 4.0,
+    "T2_LIQUID": 3.0,
+    "T3_MID": 1.5,
+    "T4_ILLIQUID": 0.0,
+    "T5_MOST_ILLIQUID": -2.0,
+}
+
+# Continuous conviction boosts (max points) from quality score (0-100) and Piotroski F (0-9).
+QUALITY_BOOST_MAX = 8.0
+PIOTROSKI_BOOST_MAX = 6.0
+
+# Fallback Piotroski threshold when the "Piotroski_Strong" column is absent.
+PIOTROSKI_STRONG_MIN = 7
+
+WATCH_MIN_SCORE = 25
+WATCH_MIN_SCREENS = 1
