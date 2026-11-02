@@ -50,6 +50,7 @@ SLEEVE_COLORS = {
 
 
 def render_html(result: PickResult) -> str:
+    """Self-contained dark-theme HTML report (shortlist, paper portfolio, sector mix)."""
     s = result.summary
     picks = result.investor_picks
     port = result.portfolio
@@ -240,6 +241,7 @@ def render_html(result: PickResult) -> str:
 
 
 def _df_records(df: pd.DataFrame) -> list[dict[str, Any]]:
+    """JSON-safe records: NaN -> None, numpy scalars -> Python scalars."""
     if df.empty:
         return []
     clean = df.where(pd.notna(df), None)
@@ -252,7 +254,7 @@ def _df_records(df: pd.DataFrame) -> list[dict[str, Any]]:
             if hasattr(v, "item"):
                 try:
                     v = v.item()
-                except Exception:
+                except (ValueError, TypeError):  # non-scalar: keep as is
                     pass
             row[k] = v
         out.append(row)
@@ -260,6 +262,7 @@ def _df_records(df: pd.DataFrame) -> list[dict[str, Any]]:
 
 
 def write_outputs(result: PickResult, out_dir: Path) -> dict[str, Path]:
+    """Write HTML/CSV/JSON (dated + ``*_latest`` aliases) into ``out_dir``; return key -> path."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -310,9 +313,8 @@ def write_outputs(result: PickResult, out_dir: Path) -> dict[str, Path]:
         ),
     }
     json_path = out_dir / f"us_picks_{stamp}.json"
-    json_path.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
+    payload_text = json.dumps(payload, indent=2, default=str)
+    json_path.write_text(payload_text, encoding="utf-8")
     paths["json"] = json_path
-    (out_dir / "us_picks_latest.json").write_text(
-        json.dumps(payload, indent=2, default=str), encoding="utf-8"
-    )
+    (out_dir / "us_picks_latest.json").write_text(payload_text, encoding="utf-8")
     return paths

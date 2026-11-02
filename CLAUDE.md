@@ -2,6 +2,11 @@
 
 Guidance for Claude Code sessions working in this repository.
 
+## Repo
+Python package `us_stock_picks/` (`engine.py` scoring, `report.py` outputs, `config.py` thresholds, `__main__.py` CLI).
+Run `python -m us_stock_picks`; verify with `pytest -q` and `ruff check .`. Screens/weights are defined once in
+`engine.SCREENS` + `config.WEIGHTS`. Never edit files in `outputs/` by hand.
+
 <!-- source-fetch-toolkit:v1 (managed by ~/bin/add_source_fetch_section.py — edit there, not here) -->
 ## Source fetching for data collection & literature surveys
 

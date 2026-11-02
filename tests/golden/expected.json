@@ -1,0 +1,270 @@
+{
+ "summary": {
+  "as_of": "2026-01-01 09:30",
+  "universe_n": 85,
+  "liquid_n": 35,
+  "ranked_n": 33,
+  "sleeve_counts": {
+   "CORE": 14,
+   "WATCH": 7,
+   "QUALITY": 6,
+   "MOMENTUM": 6
+  },
+  "avg_conviction_top": 56.76666666666666,
+  "filters": {
+   "min_price": 5.0,
+   "min_turnover_usd": 2000000.0,
+   "allowed_tiers": [
+    "T1_MOST_LIQUID",
+    "T2_LIQUID",
+    "T3_MID"
+   ]
+  }
+ },
+ "investor": [
+  {
+   "Symbol": "TST010",
+   "sleeve": "CORE",
+   "conviction_score": 73.6,
+   "screens_passed": 7,
+   "investor_rank": 1
+  },
+  {
+   "Symbol": "TST067",
+   "sleeve": "CORE",
+   "conviction_score": 66.8,
+   "screens_passed": 4,
+   "investor_rank": 2
+  },
+  {
+   "Symbol": "TST011",
+   "sleeve": "CORE",
+   "conviction_score": 65.0,
+   "screens_passed": 4,
+   "investor_rank": 3
+  },
+  {
+   "Symbol": "TST012",
+   "sleeve": "CORE",
+   "conviction_score": 63.7,
+   "screens_passed": 5,
+   "investor_rank": 4
+  },
+  {
+   "Symbol": "TST032",
+   "sleeve": "CORE",
+   "conviction_score": 63.2,
+   "screens_passed": 5,
+   "investor_rank": 5
+  },
+  {
+   "Symbol": "TST040",
+   "sleeve": "CORE",
+   "conviction_score": 61.9,
+   "screens_passed": 5,
+   "investor_rank": 6
+  },
+  {
+   "Symbol": "TST030",
+   "sleeve": "CORE",
+   "conviction_score": 61.0,
+   "screens_passed": 4,
+   "investor_rank": 7
+  },
+  {
+   "Symbol": "TST056",
+   "sleeve": "CORE",
+   "conviction_score": 55.7,
+   "screens_passed": 5,
+   "investor_rank": 8
+  },
+  {
+   "Symbol": "TST031",
+   "sleeve": "CORE",
+   "conviction_score": 48.9,
+   "screens_passed": 4,
+   "investor_rank": 9
+  },
+  {
+   "Symbol": "TST041",
+   "sleeve": "QUALITY",
+   "conviction_score": 45.3,
+   "screens_passed": 3,
+   "investor_rank": 10
+  },
+  {
+   "Symbol": "TST066",
+   "sleeve": "QUALITY",
+   "conviction_score": 34.8,
+   "screens_passed": 3,
+   "investor_rank": 11
+  },
+  {
+   "Symbol": "TST000",
+   "sleeve": "MOMENTUM",
+   "conviction_score": 47.2,
+   "screens_passed": 3,
+   "investor_rank": 12
+  },
+  {
+   "Symbol": "TST017",
+   "sleeve": "CORE",
+   "conviction_score": 57.3,
+   "screens_passed": 5,
+   "investor_rank": 13
+  },
+  {
+   "Symbol": "TST065",
+   "sleeve": "CORE",
+   "conviction_score": 54.0,
+   "screens_passed": 3,
+   "investor_rank": 14
+  },
+  {
+   "Symbol": "TST072",
+   "sleeve": "CORE",
+   "conviction_score": 53.1,
+   "screens_passed": 5,
+   "investor_rank": 15
+  }
+ ],
+ "ranked_syms": [
+  "TST010",
+  "TST067",
+  "TST011",
+  "TST012",
+  "TST032",
+  "TST040",
+  "TST030",
+  "TST017",
+  "TST056",
+  "TST065",
+  "TST072",
+  "TST002",
+  "TST031",
+  "TST015",
+  "TST041",
+  "TST046",
+  "TST007",
+  "TST045",
+  "TST066",
+  "TST027",
+  "TST051",
+  "TST000",
+  "TST036",
+  "TST060",
+  "TST070",
+  "TST075",
+  "TST077",
+  "TST057",
+  "TST052",
+  "TST047",
+  "TST021",
+  "TST071",
+  "TST050"
+ ],
+ "ranked_scores": [
+  73.6,
+  66.8,
+  65.0,
+  63.7,
+  63.2,
+  61.9,
+  61.0,
+  57.3,
+  55.7,
+  54.0,
+  53.1,
+  53.1,
+  48.9,
+  48.8,
+  45.3,
+  41.0,
+  38.1,
+  36.5,
+  34.8,
+  34.5,
+  47.2,
+  47.2,
+  44.5,
+  44.5,
+  36.8,
+  36.1,
+  34.9,
+  33.5,
+  33.4,
+  29.5,
+  28.8,
+  28.4,
+  26.2
+ ],
+ "portfolio": [
+  {
+   "Symbol": "TST010",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 81.56
+  },
+  {
+   "Symbol": "TST067",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 246.97
+  },
+  {
+   "Symbol": "TST011",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 88.64
+  },
+  {
+   "Symbol": "TST012",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 96.67
+  },
+  {
+   "Symbol": "TST032",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 1494.77
+  },
+  {
+   "Symbol": "TST040",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 92.17
+  },
+  {
+   "Symbol": "TST030",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 50.06
+  },
+  {
+   "Symbol": "TST056",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 30.59
+  },
+  {
+   "Symbol": "TST031",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 99.49
+  },
+  {
+   "Symbol": "TST041",
+   "weight": 0.1,
+   "notional_per_100k": 10000.0,
+   "shares_per_100k": 28.38
+  }
+ ],
+ "theses": [
+  "Test Co 10 (Energy). Hits: Darvas breakout; Piotroski strong; Magic Formula; Quality A/B; Actionable setup; ML bullish; Above EMA50. Price $122.61, +1.3% day. Piotroski F=0. Avg ROE 22.5%. Breakout quality B (45). Liquidity T1_MOST_LIQUID \u00b7 ~$31,479,423/day. Multi-screen agreement \u2192 highest conviction sleeve.",
+  "Test Co 67 (Healthcare). Hits: Darvas breakout; Piotroski strong; Coffee Can; Bull Cartel. Price $40.49, +2.5% day. Piotroski F=1. Avg ROE 30.0%. Breakout quality D (83). Liquidity T3_MID \u00b7 ~$41,229,497/day. Multi-screen agreement \u2192 highest conviction sleeve.",
+  "Test Co 11 (nan). Hits: Darvas breakout; Piotroski strong; Magic Formula; Actionable setup. Price $112.81, -0.1% day. Piotroski F=9. Avg ROE -2.7%. Breakout quality C (75). Liquidity T2_LIQUID \u00b7 ~$31,834,264/day. Multi-screen agreement \u2192 highest conviction sleeve.",
+  "Test Co 12 (Healthcare). Hits: Darvas breakout; Piotroski strong; Golden cross; Quality A/B; Actionable setup. Price $103.44, +1.3% day. Piotroski F=4. Avg ROE 28.8%. Breakout quality B (19). Liquidity T3_MID \u00b7 ~$9,357,692/day. Multi-screen agreement \u2192 highest conviction sleeve.",
+  "Test Co 32 (Healthcare). Hits: Darvas breakout; Coffee Can; Magic Formula; Golden cross; Above EMA50. Price $6.69, +1.0% day. Piotroski F=4. Avg ROE 9.0%. Breakout quality C (50). Liquidity T3_MID \u00b7 ~$29,601,316/day. Multi-screen agreement \u2192 highest conviction sleeve."
+ ]
+}

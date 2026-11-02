@@ -1,0 +1,32 @@
+[project]
+name = "us-stock-picks"
+version = "1.0.0"
+description = "Multi-screen conviction ranking of the US market scan: investor shortlist + quant exports"
+requires-python = ">=3.9"
+dependencies = ["pandas>=2.0", "openpyxl>=3.1", "numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+us-stock-picks = "us_stock_picks.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["us_stock_picks"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"us_stock_picks/report.py" = ["E501"]  # inline HTML/CSS template
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

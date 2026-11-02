@@ -7,6 +7,7 @@ liquidity gates, scores multi-screen conviction, and assigns portfolio sleeves.
 """
 from __future__ import annotations
 
+import logging
 import re
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -16,6 +17,25 @@ from typing import Any
 import pandas as pd
 
 from . import config as cfg
+
+log = logging.getLogger(__name__)
+
+# (flag column, human label, weight key in config.WEIGHTS) - single source of truth for
+# screen order, display labels and conviction weights.
+SCREENS: tuple[tuple[str, str, str], ...] = (
+    ("scr_breakout", "Darvas breakout", "breakout"),
+    ("scr_piotroski", "Piotroski strong", "piotroski_strong"),
+    ("scr_coffee", "Coffee Can", "coffee_can"),
+    ("scr_magic", "Magic Formula", "magic_formula"),
+    ("scr_bull", "Bull Cartel", "bull_cartel"),
+    ("scr_gc", "Golden cross", "golden_cross"),
+    ("scr_quality_ab", "Quality A/B", "quality_ab"),
+    ("scr_actionable", "Actionable setup", "actionable"),
+    ("scr_ml", "ML bullish", "ml_bullish"),
+    ("scr_above_ema50", "Above EMA50", "above_ema50"),
+)
+SCREEN_LABELS = {col: label for col, label, _ in SCREENS}
+FLAG_COLS = [col for col, _, _ in SCREENS]
 
 
 def find_latest_scan(scan_dir: Path | None = None, pattern: str = "us_full_scan_*.xlsx") -> Path:
@@ -37,6 +57,7 @@ def find_latest_scan(scan_dir: Path | None = None, pattern: str = "us_full_scan_
 
     if not candidates:
         searched = ", ".join(str(d) for d in dirs)
+        log.debug("no scan workbooks found in %s", searched)
         raise FileNotFoundError(
             f"No US scan workbooks matching {pattern!r}. Searched: {searched}\n"
             "Run: python market-pipeline/code/python_files/full_us_market_scan.py"
@@ -47,6 +68,7 @@ def find_latest_scan(scan_dir: Path | None = None, pattern: str = "us_full_scan_
 
 
 def _scan_as_of(path: Path) -> str:
+    """"YYYY-MM-DD HH:MM" parsed from the filename, else the file mtime date."""
     m = re.search(r"(\d{8})[_T]?(\d{4})?", path.stem)
     if not m:
         return datetime.fromtimestamp(path.stat().st_mtime).strftime("%Y-%m-%d")
@@ -56,6 +78,7 @@ def _scan_as_of(path: Path) -> str:
 
 
 def _read_sheet(path: Path, name: str) -> pd.DataFrame:
+    """Read one worksheet; empty frame if the sheet is missing or has no columns."""
     try:
         df = pd.read_excel(path, sheet_name=name)
     except ValueError:
@@ -111,10 +134,10 @@ def load_universe(scan_path: Path) -> pd.DataFrame:
         base = base.merge(fund_renamed, on="Symbol", how="outer")
         # Coalesce overlapping numeric/text fields
         for c in overlap:
-            left, right = c, f"{c}_fund"
+            right = f"{c}_fund"
             if right in base.columns:
                 base[c] = base[c].combine_first(base[right])
-                base.drop(columns=[right], inplace=True)
+                base = base.drop(columns=[right])
 
     # Golden cross set
     gc_syms: set[str] = set()
@@ -134,6 +157,7 @@ def load_universe(scan_path: Path) -> pd.DataFrame:
 
 
 def _screen_flags(df: pd.DataFrame) -> pd.DataFrame:
+    """Add boolean ``scr_*`` flags, ``screens_passed`` (count) and ``screens_list`` (text) columns."""
     out = df.copy()
 
     darvas = out.get("Darvas_Signal", pd.Series(index=out.index, dtype=object)).astype(str).str.upper()
@@ -143,7 +167,7 @@ def _screen_flags(df: pd.DataFrame) -> pd.DataFrame:
         out["scr_piotroski"] = _boolish(out["Piotroski_Strong"])
     else:
         p = _num(out["Piotroski_Score"]) if "Piotroski_Score" in out.columns else pd.Series(0, index=out.index)
-        out["scr_piotroski"] = p.fillna(0) >= 7
+        out["scr_piotroski"] = p.fillna(0) >= cfg.PIOTROSKI_STRONG_MIN
 
     out["scr_coffee"] = (
         _boolish(out["CoffeeCan"]) if "CoffeeCan" in out.columns else pd.Series(False, index=out.index)
@@ -181,36 +205,10 @@ def _screen_flags(df: pd.DataFrame) -> pd.DataFrame:
         & (ml_pred.fillna(0) > 0)
     )
 
-    flag_cols = [
-        "scr_breakout",
-        "scr_piotroski",
-        "scr_coffee",
-        "scr_magic",
-        "scr_bull",
-        "scr_gc",
-        "scr_quality_ab",
-        "scr_actionable",
-        "scr_ml",
-        "scr_above_ema50",
-    ]
-    out["screens_passed"] = out[flag_cols].sum(axis=1).astype(int)
-
-    # Human-readable screen list
-    labels = {
-        "scr_breakout": "Darvas breakout",
-        "scr_piotroski": "Piotroski strong",
-        "scr_coffee": "Coffee Can",
-        "scr_magic": "Magic Formula",
-        "scr_bull": "Bull Cartel",
-        "scr_gc": "Golden cross",
-        "scr_quality_ab": "Quality A/B",
-        "scr_actionable": "Actionable setup",
-        "scr_ml": "ML bullish",
-        "scr_above_ema50": "Above EMA50",
-    }
+    out["screens_passed"] = out[FLAG_COLS].sum(axis=1).astype(int)
 
     def _list_screens(row: pd.Series) -> str:
-        hits = [lab for col, lab in labels.items() if bool(row.get(col))]
+        hits = [lab for col, lab in SCREEN_LABELS.items() if bool(row.get(col))]
         return "; ".join(hits)
 
     out["screens_list"] = out.apply(_list_screens, axis=1)
@@ -218,42 +216,26 @@ def _screen_flags(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _conviction_score(df: pd.DataFrame) -> pd.Series:
-    w = cfg.WEIGHTS
-    score = (
-        df["scr_breakout"].astype(int) * w["breakout"]
-        + df["scr_piotroski"].astype(int) * w["piotroski_strong"]
-        + df["scr_coffee"].astype(int) * w["coffee_can"]
-        + df["scr_magic"].astype(int) * w["magic_formula"]
-        + df["scr_bull"].astype(int) * w["bull_cartel"]
-        + df["scr_gc"].astype(int) * w["golden_cross"]
-        + df["scr_quality_ab"].astype(int) * w["quality_ab"]
-        + df["scr_actionable"].astype(int) * w["actionable"]
-        + df["scr_ml"].astype(int) * w["ml_bullish"]
-        + df["scr_above_ema50"].astype(int) * w["above_ema50"]
-    ).astype(float)
+    """Weighted multi-screen score clipped to 0-100 (one decimal), plus quality/F-score/liquidity boosts."""
+    score = pd.Series(0.0, index=df.index)
+    for col, _, weight_key in SCREENS:
+        score = score + df[col].astype(int) * cfg.WEIGHTS[weight_key]
 
     # Continuous boosts from quality / F-score / liquidity
     qs = _num(df["Quality_Score"]) if "Quality_Score" in df.columns else pd.Series(0.0, index=df.index)
-    score = score + (qs.fillna(0).clip(0, 100) / 100.0) * 8.0
+    score = score + (qs.fillna(0).clip(0, 100) / 100.0) * cfg.QUALITY_BOOST_MAX
 
     ps = _num(df["Piotroski_Score"]) if "Piotroski_Score" in df.columns else pd.Series(0.0, index=df.index)
-    score = score + (ps.fillna(0).clip(0, 9) / 9.0) * 6.0
+    score = score + (ps.fillna(0).clip(0, 9) / 9.0) * cfg.PIOTROSKI_BOOST_MAX
 
     tier = df.get("Liquidity_Tier", pd.Series("", index=df.index)).astype(str)
-    score = score + tier.map(
-        {
-            "T1_MOST_LIQUID": 4.0,
-            "T2_LIQUID": 3.0,
-            "T3_MID": 1.5,
-            "T4_ILLIQUID": 0.0,
-            "T5_MOST_ILLIQUID": -2.0,
-        }
-    ).fillna(0.0)
+    score = score + tier.map(cfg.TIER_SCORE_BONUS).fillna(0.0)
 
     return score.clip(0, 100).round(1)
 
 
 def _assign_sleeve(row: pd.Series) -> str:
+    """Return CORE / MOMENTUM / QUALITY / WATCH / PASS for one scored row."""
     score = float(row.get("conviction_score") or 0)
     n = int(row.get("screens_passed") or 0)
     if score >= cfg.CORE_MIN_SCORE and n >= cfg.CORE_MIN_SCREENS:
@@ -264,12 +246,13 @@ def _assign_sleeve(row: pd.Series) -> str:
     if row.get("scr_piotroski") or row.get("scr_coffee") or row.get("scr_magic"):
         if score >= cfg.QUALITY_MIN_SCORE:
             return "QUALITY"
-    if score >= 25 and n >= 1:
+    if score >= cfg.WATCH_MIN_SCORE and n >= cfg.WATCH_MIN_SCREENS:
         return "WATCH"
     return "PASS"
 
 
 def _thesis(row: pd.Series) -> str:
+    """One-paragraph plain-English thesis for a ranked row."""
     bits: list[str] = []
     name = row.get("Name") or row.get("Symbol")
     sector = row.get("Sector") or "Unknown sector"
@@ -325,6 +308,7 @@ def apply_filters(
     allowed_tiers: tuple[str, ...] = cfg.ALLOWED_LIQUIDITY_TIERS,
     require_screen: bool = True,
 ) -> pd.DataFrame:
+    """Liquidity / price / screen gate; ``df`` must already carry ``scr_*`` flags."""
     out = df.copy()
     price = _num(out["LTP"]) if "LTP" in out.columns else pd.Series(float("nan"), index=out.index)
     turn = _num(out["Turnover_USD"]) if "Turnover_USD" in out.columns else pd.Series(float("nan"), index=out.index)
@@ -337,9 +321,7 @@ def apply_filters(
     if allowed_tiers:
         # Keep rows with known good tiers; also keep UNKNOWN if liquid by turnover
         good_tier = tier.isin(list(allowed_tiers))
-        unknown = ~tier.isin(
-            ["T1_MOST_LIQUID", "T2_LIQUID", "T3_MID", "T4_ILLIQUID", "T5_MOST_ILLIQUID"]
-        )
+        unknown = ~tier.isin(list(cfg.TIER_SCORE_BONUS))
         mask &= good_tier | (unknown & (turn.fillna(0) >= min_turnover))
 
     if require_screen:
@@ -355,6 +337,7 @@ def apply_filters(
 
 
 def rank_picks(df: pd.DataFrame) -> pd.DataFrame:
+    """Score, assign sleeves, drop PASS rows and sort (sleeve, score, screens, turnover); adds ``rank``."""
     out = df.copy()
     out["conviction_score"] = _conviction_score(out)
     out["sleeve"] = out.apply(_assign_sleeve, axis=1)
@@ -371,7 +354,7 @@ def rank_picks(df: pd.DataFrame) -> pd.DataFrame:
         ascending=[True, False, False, False],
     ).reset_index(drop=True)
     out["rank"] = out.index + 1
-    out.drop(columns=["_sr", "_to"], inplace=True)
+    out = out.drop(columns=["_sr", "_to"])
     return out
 
 
@@ -525,6 +508,7 @@ QUANT_COLUMNS = [
 
 
 def quant_frame(ranked: pd.DataFrame, n: int | None = cfg.TOP_QUANT_ROWS) -> pd.DataFrame:
+    """Top ``n`` ranked rows restricted to QUANT_COLUMNS (all rows if ``n`` is None)."""
     cols = [c for c in QUANT_COLUMNS if c in ranked.columns]
     out = ranked[cols].copy()
     if n is not None:
