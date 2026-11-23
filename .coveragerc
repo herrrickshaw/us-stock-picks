@@ -1,0 +1,5 @@
+[run]
+source = us_stock_picks, run_us_picks
+omit =
+    tests/*
+    */conftest.py
