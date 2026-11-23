@@ -65,6 +65,10 @@ def test_render_html_content(result):
         assert f"<strong>{k}</strong>" in h
 
 
+def test_sleeve_color_palette_is_fixed():
+    assert rep.SLEEVE_COLORS == {"CORE": "#0f766e", "QUALITY": "#1d4ed8", "MOMENTUM": "#c2410c", "WATCH": "#6b7280"}
+
+
 def test_render_html_sleeve_colors(result):
     h = rep.render_html(result)
     sleeves = set(result.investor_picks["sleeve"])
@@ -164,6 +168,8 @@ def test_write_outputs_json_payload(result, tmp_path):
     assert len(payload["quant_ranked"]) == len(result.ranked)
     assert "Not investment advice" in payload["disclaimer"]
     assert json.loads((tmp_path / "us_picks_latest.json").read_text(encoding="utf-8")) == payload
+    for f in (paths["json"], tmp_path / "us_picks_latest.json"):
+        assert f.read_text(encoding="utf-8").startswith('{\n  "summary": {\n    "as_of"')   # indent=2
 
 
 def test_write_outputs_empty_portfolio_skips_portfolio_csv(result, tmp_path):

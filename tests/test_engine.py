@@ -30,6 +30,12 @@ def test_find_latest_scan_accepts_latest_alias(tmp_path):
     assert eng.find_latest_scan(tmp_path) == alias
 
 
+def test_find_latest_scan_alias_is_added_even_for_custom_pattern(tmp_path):
+    _touch(tmp_path / "other_1.xlsx", 1000)
+    alias = _touch(tmp_path / "us_full_scan_latest.xlsx", 3000)
+    assert eng.find_latest_scan(tmp_path, pattern="other_*.xlsx") == alias
+
+
 def test_find_latest_scan_default_dirs_and_missing_dirs(tmp_path, monkeypatch):
     d = tmp_path / "def"
     d.mkdir()
@@ -139,6 +145,13 @@ def test_load_universe_merge_dedup_and_coalesce(tmp_path):
     assert not any(c.endswith("_fund") for c in u.columns)
 
 
+def test_load_universe_overlap_prefers_tech_value_over_fund(tmp_path):
+    tech = pd.DataFrame({"Symbol": ["A", "B"], "LTP": [1.0, np.nan]})
+    fund = pd.DataFrame({"Symbol": ["A", "B"], "LTP": [99.0, 7.0]})
+    u = eng.load_universe(_scan(tmp_path, tech, fund)).set_index("Symbol")
+    assert u.loc["A", "LTP"] == 1.0 and u.loc["B", "LTP"] == 7.0
+
+
 def test_load_universe_ml_sheet_merged_only_when_missing(tmp_path):
     tech = pd.DataFrame({"Symbol": ["A", "B"], "LTP": [1.0, 2.0]})
     ml = pd.DataFrame({"Symbol": ["a"], "ML_Direction": ["BULLISH"], "ML_Confidence": [0.9]})
@@ -195,6 +208,7 @@ def test_flags_missing_columns_all_false():
 def test_flags_coffee_magic_bull_gc_quality():
     f = _flags(CoffeeCan=["PASS", "x"], MagicFormula=["Y", "x"], BullCartel=["TRUE", "x"],
                golden_cross=[True, False], Quality_Grade=["a", "C"])
+    assert _flags(Quality_Grade=["B", "b", "D"])["scr_quality_ab"].tolist() == [True, True, False]
     assert f["scr_coffee"].tolist() == [True, False]
     assert f["scr_magic"].tolist() == [True, False]
     assert f["scr_bull"].tolist() == [True, False]
@@ -489,6 +503,11 @@ def test_build_portfolio_rounds_weight_and_fallbacks():
     assert "shares_per_100k" not in eng.build_portfolio(no_ltp).columns
 
 
+def test_build_portfolio_prefers_momentum_over_watch():
+    p = pd.DataFrame({"Symbol": ["W", "M"], "sleeve": ["WATCH", "MOMENTUM"], "LTP": [1.0, 1.0]})
+    assert eng.build_portfolio(p, size=5)["Symbol"].tolist() == ["M"]
+
+
 def test_build_portfolio_size_zero_returns_empty():
     p = pd.DataFrame({"Symbol": ["A"], "sleeve": ["CORE"], "LTP": [1.0]})
     assert eng.build_portfolio(p, size=0).empty
@@ -559,3 +578,14 @@ def test_run_picks_when_nothing_passes_filters(tmp_path):
 def test_run_picks_no_scan_found(tmp_path):
     with pytest.raises(FileNotFoundError):
         eng.run_picks(scan_dir=tmp_path)
+
+
+def test_run_picks_as_of_falls_back_to_filename_when_universe_empty(tmp_path, monkeypatch):
+    p = tmp_path / "us_full_scan_20260102_0930.xlsx"
+    p.write_bytes(b"")
+    monkeypatch.setattr(eng, "load_universe", lambda path: pd.DataFrame({"as_of": []}))
+    monkeypatch.setattr(eng, "_screen_flags", lambda raw: raw)
+    monkeypatch.setattr(eng, "apply_filters", lambda *a, **k: pd.DataFrame())
+    monkeypatch.setattr(eng, "rank_picks", lambda liquid: pd.DataFrame({"sleeve": []}))
+    res = eng.run_picks(scan_path=p)
+    assert res.as_of == "2026-01-02 09:30"
