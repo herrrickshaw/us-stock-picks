@@ -12,7 +12,7 @@ jobs:
           python-version: "3.12"
       - run: pip install pytest pytest-cov -r requirements.txt
       - run: pytest --cov=us_stock_picks --cov=run_us_picks --cov-report=xml --cov-report=term-missing
-      - uses: codecov/codecov-action@v5
+      - uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: coverage.xml
